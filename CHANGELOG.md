@@ -1,5 +1,11 @@
 # br-docs-validator
 
+## 0.0.4
+
+### Patch Changes
+
+- 00a4c84: type definitions
+
 ## 0.0.3
 
 ### Patch Changes
