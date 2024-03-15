@@ -3,6 +3,7 @@
   "version": "0.0.4",
   "description": "Validador de CPF e CNPJ",
   "main": "src/index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "test": "vitest",
     "release": "changeset publish",
@@ -17,6 +18,7 @@
     "vitest": "^1.4.0"
   },
   "files": [
-    "src/"
+    "src/",
+    "types/"
   ]
 }
