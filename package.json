@@ -4,12 +4,14 @@
   "description": "Validador de CPF e CNPJ",
   "main": "src/index.js",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "release": "changeset publish"
   },
   "keywords": [],
   "author": "Rezende, Samuel Ferreira <samuelferreirarezende@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "vitest": "^1.4.0"
   },
   "files": [

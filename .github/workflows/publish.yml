@@ -1,0 +1,18 @@
+name: Publish
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Create pull request or publish
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: npm run release
