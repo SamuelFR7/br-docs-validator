@@ -1,5 +1,11 @@
 # br-docs-validator
 
+## 0.0.5
+
+### Patch Changes
+
+- 8e2e840: type definitions in npm
+
 ## 0.0.4
 
 ### Patch Changes
