@@ -1,5 +1,11 @@
 # br-docs-validator
 
+## 0.0.6
+
+### Patch Changes
+
+- feb2afd: package type as module
+
 ## 0.0.5
 
 ### Patch Changes
