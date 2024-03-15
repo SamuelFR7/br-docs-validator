@@ -1,5 +1,11 @@
 # br-docs-validator
 
+## 0.0.7
+
+### Patch Changes
+
+- 6157f0b: change import method
+
 ## 0.0.6
 
 ### Patch Changes
