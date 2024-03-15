@@ -98,6 +98,6 @@ function isValid(cnpj) {
   return firstDigitIsValid && secondDigitIsValid;
 }
 
-export default {
+module.exports = {
   isValid,
 };

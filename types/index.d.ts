@@ -1,4 +1,4 @@
-import cpf from "./cpf";
-import cnpj from "./cnpj";
-export { cpf, cnpj };
+import cnpj = require("./cnpj");
+import cpf = require("./cpf");
+export { cnpj, cpf };
 //# sourceMappingURL=index.d.ts.map

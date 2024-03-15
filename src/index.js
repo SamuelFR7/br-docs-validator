@@ -1,4 +1,7 @@
-import cpf from "./cpf";
-import cnpj from "./cnpj";
+const cnpj = require("./cnpj");
+const cpf = require("./cpf");
 
-export { cpf, cnpj };
+module.exports = {
+  cnpj,
+  cpf,
+};

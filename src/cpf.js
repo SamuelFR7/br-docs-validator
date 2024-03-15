@@ -91,6 +91,6 @@ function isValid(cpf) {
   return firstDigitIsValid && secondDigitIsValid;
 }
 
-export default {
+module.exports = {
   isValid,
 };

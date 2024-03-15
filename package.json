@@ -4,7 +4,6 @@
   "description": "Validador de CPF e CNPJ",
   "main": "src/index.js",
   "types": "types/index.d.ts",
-  "type": "module",
   "scripts": {
     "test": "vitest",
     "release": "changeset publish",
