@@ -1,6 +1,6 @@
 {
   "name": "br-docs-validator",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Validador de CPF e CNPJ",
   "main": "src/index.js",
   "types": "types/index.d.ts",
