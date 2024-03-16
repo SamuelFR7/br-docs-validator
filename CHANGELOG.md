@@ -1,5 +1,11 @@
 # br-docs-validator
 
+## 0.1.6
+
+### Patch Changes
+
+- 7cacb8e: move strip function to utils const
+
 ## 0.1.5
 
 ### Patch Changes
