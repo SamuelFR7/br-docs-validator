@@ -1,5 +1,11 @@
 # br-docs-validator
 
+## 0.1.0
+
+### Minor Changes
+
+- 987292f: add generic validator
+
 ## 0.0.7
 
 ### Patch Changes
