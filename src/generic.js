@@ -1,12 +1,13 @@
 const cpf = require("./cpf");
 const cnpj = require("./cnpj");
+const { strip } = require("./");
 
 /**
  * @param {string} cpfOrCnpj
  * @returns {boolean}
  */
 function isValid(cpfOrCnpj) {
-  const formatedCpfOrCnpj = (cpfOrCnpj || "").replace(/[^\d]/g, "");
+  const formatedCpfOrCnpj = strip(cpfOrCnpj);
 
   if (formatedCpfOrCnpj.length === 14) {
     return cnpj.isValid(cpfOrCnpj);
