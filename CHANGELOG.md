@@ -1,5 +1,11 @@
 # br-docs-validator
 
+## 0.1.3
+
+### Patch Changes
+
+- 58f50ed: update package json
+
 ## 0.1.2
 
 ### Patch Changes
