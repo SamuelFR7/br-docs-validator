@@ -1,5 +1,11 @@
 # br-docs-validator
 
+## 0.1.1
+
+### Patch Changes
+
+- af42d72: added tests to generic validator
+
 ## 0.1.0
 
 ### Minor Changes
