@@ -1,5 +1,11 @@
 # br-docs-validator
 
+## 0.1.4
+
+### Patch Changes
+
+- f58f47a: strip function
+
 ## 0.1.3
 
 ### Patch Changes
