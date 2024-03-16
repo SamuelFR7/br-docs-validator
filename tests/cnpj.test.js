@@ -11,6 +11,14 @@ describe("cnpj", () => {
     expect(cnpj.isValid("18856024000112")).toBeFalsy();
   });
 
+  it("should return punctuated cnpj", () => {
+    expect(cnpj.punctuated("11444777000161")).toBe("11.444.777/0001-61");
+  });
+
+  it("should return a empty string", () => {
+    expect(cnpj.punctuated("")).toBe("");
+  });
+
   it("should validate unformatted strings", () => {
     expect(cnpj.isValid("11444777000161")).toBeTruthy();
     expect(cnpj.isValid("18856024000102")).toBeTruthy();

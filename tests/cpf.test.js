@@ -12,6 +12,14 @@ describe("cpf", () => {
     expect(cpf.isValid("05541739054")).toBeFalsy();
   });
 
+  it("should return punctuated cpf", () => {
+    expect(cpf.punctuated("05541739055")).toBe("055.417.390-55");
+  });
+
+  it("should return nothing", () => {
+    expect(cpf.punctuated("")).toBe("");
+  });
+
   it("should validate unformatted strings", () => {
     expect(cpf.isValid("05541739055")).toBeTruthy();
   });

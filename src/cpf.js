@@ -91,6 +91,15 @@ function isValid(cpf) {
   return firstDigitIsValid && secondDigitIsValid;
 }
 
+/**
+ * @param {string} cpf
+ * @returns {string}
+ */
+function punctuated(cpf) {
+  return cpf.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, "$1.$2.$3-$4");
+}
+
 module.exports = {
   isValid,
+  punctuated,
 };

@@ -20,6 +20,23 @@ function isValid(cpfOrCnpj) {
   return false;
 }
 
+/**
+ * @param {string} cpfOrCnpj
+ * @returns {string}
+ */
+function punctuated(cpfOrCnpj) {
+  if (cpfOrCnpj.length === 14) {
+    return cnpj.punctuated(cpfOrCnpj);
+  }
+
+  if (cpfOrCnpj.length === 11) {
+    return cpf.punctuated(cpfOrCnpj);
+  }
+
+  return "";
+}
+
 module.exports = {
   isValid,
+  punctuated,
 };
