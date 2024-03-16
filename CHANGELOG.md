@@ -1,5 +1,11 @@
 # br-docs-validator
 
+## 0.1.5
+
+### Patch Changes
+
+- f313ff6: add punctuated functions
+
 ## 0.1.4
 
 ### Patch Changes
