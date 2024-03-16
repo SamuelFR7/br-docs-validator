@@ -1,5 +1,11 @@
 # br-docs-validator
 
+## 0.1.2
+
+### Patch Changes
+
+- bf9aaec: fix types
+
 ## 0.1.1
 
 ### Patch Changes
