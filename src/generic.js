@@ -3,7 +3,7 @@ const cnpj = require("./cnpj");
 
 /**
  * @param {string} cpfOrCnpj
- * @returns {bool}
+ * @returns {boolean}
  */
 function isValid(cpfOrCnpj) {
   const formatedCpfOrCnpj = (cpfOrCnpj || "").replace(/[^\d]/g, "");

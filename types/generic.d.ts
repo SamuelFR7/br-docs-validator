@@ -1,6 +1,6 @@
 /**
  * @param {string} cpfOrCnpj
- * @returns {bool}
+ * @returns {boolean}
  */
-export function isValid(cpfOrCnpj: string): bool;
+export function isValid(cpfOrCnpj: string): boolean;
 //# sourceMappingURL=generic.d.ts.map
