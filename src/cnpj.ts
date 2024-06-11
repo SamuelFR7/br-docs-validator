@@ -11,20 +11,18 @@ const cnpjBlacklist = [
   "99999999999999",
 ];
 
-/**
- * @param {string} cnpj
- * @returns {string}
- */
-function format(cnpj) {
+function format(cnpj: string) {
   return (cnpj || "").replace(/[-\\/.]/g, "");
 }
 
-/**
- * @param {string} cnpj
- * @return {boolean}
- */
-function validFirstDigit(cnpj) {
-  const firstDigit = parseInt(cnpj[12], 10);
+function validFirstDigit(cnpj: string) {
+  const digit = cnpj[12];
+
+  if (!digit) {
+    return false;
+  }
+
+  const firstDigit = parseInt(digit, 10);
   const initialTwelve = cnpj
     .slice(0, 12)
     .split("")
@@ -49,12 +47,14 @@ function validFirstDigit(cnpj) {
   return 11 - mod === firstDigit;
 }
 
-/**
- * @param {string} cnpj
- * @returns {boolean}
- */
-function validSecondDigit(cnpj) {
-  const secondDigit = parseInt(cnpj[13], 10);
+function validSecondDigit(cnpj: string) {
+  const digit = cnpj[13];
+
+  if (!digit) {
+    return false;
+  }
+
+  const secondDigit = parseInt(digit, 10);
   const firstThirteen = cnpj
     .slice(0, 13)
     .split("")
@@ -79,11 +79,7 @@ function validSecondDigit(cnpj) {
   return 11 - mod === secondDigit;
 }
 
-/**
- * @param {string} cnpj
- * @returns {boolean}
- */
-function isValid(cnpj) {
+function isValid(cnpj: string) {
   const formatedCnpj = format(cnpj);
 
   if (!formatedCnpj) return false;
@@ -98,18 +94,11 @@ function isValid(cnpj) {
   return firstDigitIsValid && secondDigitIsValid;
 }
 
-/**
- * @param {string} cnpj
- * @returns {string}
- */
-function punctuated(cnpj) {
+function punctuated(cnpj: string) {
   return cnpj.replace(
     /^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/,
     "$1.$2.$3/$4-$5"
   );
 }
 
-module.exports = {
-  isValid,
-  punctuated,
-};
+export { isValid, punctuated };

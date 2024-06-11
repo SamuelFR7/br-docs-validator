@@ -1,12 +1,6 @@
-const cpf = require("./cpf");
-const cnpj = require("./cnpj");
-const utils = require("./utils");
+import { cpf, cnpj, utils } from "./";
 
-/**
- * @param {string} cpfOrCnpj
- * @returns {boolean}
- */
-function isValid(cpfOrCnpj) {
+function isValid(cpfOrCnpj: string) {
   const formatedCpfOrCnpj = utils.strip(cpfOrCnpj);
 
   if (formatedCpfOrCnpj.length === 14) {
@@ -20,11 +14,7 @@ function isValid(cpfOrCnpj) {
   return false;
 }
 
-/**
- * @param {string} cpfOrCnpj
- * @returns {string}
- */
-function punctuated(cpfOrCnpj) {
+function punctuated(cpfOrCnpj: string) {
   if (cpfOrCnpj.length === 14) {
     return cnpj.punctuated(cpfOrCnpj);
   }
@@ -36,7 +26,4 @@ function punctuated(cpfOrCnpj) {
   return "";
 }
 
-module.exports = {
-  isValid,
-  punctuated,
-};
+export { isValid, punctuated };

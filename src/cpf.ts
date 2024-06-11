@@ -12,20 +12,18 @@ const cpfBlacklist = [
   "12345678909",
 ];
 
-/**
- * @param {string} cpf
- * @returns {string}
- */
-function format(cpf) {
+function format(cpf: string) {
   return (cpf || "").replace(/[.-]/g, "");
 }
 
-/**
- * @param {string} cpf
- * @returns {boolean}
- */
-function validFirstDigit(cpf) {
-  const firstDigit = parseInt(cpf[9], 10);
+function validFirstDigit(cpf: string) {
+  const digit = cpf[9];
+
+  if (!digit) {
+    return false;
+  }
+
+  const firstDigit = parseInt(digit, 10);
   const initialNine = cpf
     .slice(0, 9)
     .split("")
@@ -46,12 +44,14 @@ function validFirstDigit(cpf) {
   return 11 - mod === firstDigit;
 }
 
-/**
- * @param {string} cpf
- * @returns {boolean}
- */
-function validSecondDigit(cpf) {
-  const secondDigit = parseInt(cpf[10], 10);
+function validSecondDigit(cpf: string) {
+  const digit = cpf[10];
+
+  if (!digit) {
+    return false;
+  }
+
+  const secondDigit = parseInt(digit, 10);
   const initialTen = cpf
     .slice(0, 10)
     .split("")
@@ -72,11 +72,7 @@ function validSecondDigit(cpf) {
   return 11 - mod === secondDigit;
 }
 
-/**
- * @param {string} cpf
- * @returns {boolean}
- */
-function isValid(cpf) {
+function isValid(cpf: string) {
   const formatedCpf = format(cpf);
 
   if (!formatedCpf) return false;
@@ -91,15 +87,8 @@ function isValid(cpf) {
   return firstDigitIsValid && secondDigitIsValid;
 }
 
-/**
- * @param {string} cpf
- * @returns {string}
- */
-function punctuated(cpf) {
+function punctuated(cpf: string) {
   return cpf.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, "$1.$2.$3-$4");
 }
 
-module.exports = {
-  isValid,
-  punctuated,
-};
+export { isValid, punctuated };

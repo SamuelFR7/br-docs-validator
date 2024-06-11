@@ -1,13 +1,10 @@
 import { expect, describe, it } from "vitest";
 
-import { cnpj } from "../src";
+import { cnpj } from "../src/index";
 
 describe("cnpj", () => {
   it("should not validate invalid values", () => {
     expect(cnpj.isValid("")).toBeFalsy();
-    expect(cnpj.isValid(null)).toBeFalsy();
-    expect(cnpj.isValid(undefined)).toBeFalsy();
-    expect(cnpj.isValid()).toBeFalsy();
     expect(cnpj.isValid("18856024000112")).toBeFalsy();
   });
 
