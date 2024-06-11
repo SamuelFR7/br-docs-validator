@@ -1,14 +1,9 @@
 {
   "name": "br-docs-validator",
+  "license": "MIT",
+  "author": "Rezende, Samuel Ferreira <samuelferreirarezende@gmail.com>",
   "version": "0.1.6",
   "description": "CPF and CNPJ validator",
-  "main": "src/index.js",
-  "types": "types/index.d.ts",
-  "scripts": {
-    "test": "vitest",
-    "release": "changeset publish",
-    "types": "tsc"
-  },
   "keywords": [
     "cpf",
     "cnpj",
@@ -19,15 +14,19 @@
     "type": "git",
     "url": "https://github.com/SamuelFR7/br-docs-validator"
   },
-  "author": "Rezende, Samuel Ferreira <samuelferreirarezende@gmail.com>",
-  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "typecheck": "tsc",
+    "test": "vitest",
+    "release": "pnpm run build && changeset publish"
+  },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
+    "tsup": "^8.1.0",
     "typescript": "^5.4.2",
     "vitest": "^1.4.0"
-  },
-  "files": [
-    "src/",
-    "types/"
-  ]
+  }
 }

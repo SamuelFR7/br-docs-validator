@@ -4,10 +4,6 @@ import { cpf } from "../src";
 
 describe("cpf", () => {
   it("should not validate invalid values", () => {
-    expect(cpf.isValid(null)).toBeFalsy();
-    expect(cpf.isValid(undefined)).toBeFalsy();
-    expect(cpf.isValid()).toBeFalsy();
-    expect(cpf.isValid()).toBeFalsy();
     expect(cpf.isValid("000000000000")).toBeFalsy();
     expect(cpf.isValid("05541739054")).toBeFalsy();
   });

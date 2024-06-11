@@ -1,4 +1,4 @@
-import { describe, expect, it, should } from "vitest";
+import { describe, expect, it } from "vitest";
 
 import { generic } from "../src";
 
@@ -20,9 +20,6 @@ describe("generic validator", () => {
   });
 
   it("should not validate invalid values", () => {
-    expect(generic.isValid()).toBeFalsy();
-    expect(generic.isValid(null)).toBeFalsy();
-    expect(generic.isValid(undefined)).toBeFalsy();
     expect(generic.isValid("")).toBeFalsy();
     expect(generic.isValid("00000000000"));
     expect(generic.isValid("00000000000000")).toBeFalsy();
