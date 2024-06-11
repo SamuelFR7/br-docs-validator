@@ -2,7 +2,7 @@
   "name": "br-docs-validator",
   "license": "MIT",
   "author": "Rezende, Samuel Ferreira <samuelferreirarezende@gmail.com>",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "CPF and CNPJ validator",
   "keywords": [
     "cpf",
