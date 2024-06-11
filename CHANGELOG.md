@@ -1,5 +1,11 @@
 # br-docs-validator
 
+## 0.2.0
+
+### Minor Changes
+
+- f93b89e: added typescript
+
 ## 0.1.6
 
 ### Patch Changes
